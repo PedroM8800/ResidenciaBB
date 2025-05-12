@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="assets/logo-bb.png" alt="Logo Banco do Brasil" class="logo-img">
+    </div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="logs.html">Logs</a>
+      <a href="#">Requisições</a>
+    </nav>
+    <a href="#" class="logout">⏻ Sair</a>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <h1>Visão geral</h1>
+      <span class="user">usuário68 🔍</span>
+    </header>
+
+    <section class="cards">
+      <div class="card"><h2>HTTP 200</h2><p class="green">560</p></div>
+      <div class="card"><h2>Error 4XX</h2><p class="orange">28</p></div>
+      <div class="card"><h2>Error 5XX</h2><p class="yellow">5</p></div>
+      <div class="card"><h2>Timeout</h2><p class="gray">9</p></div>
+      <div class="card"><h2>Total de requisições</h2><p>602</p></div>
+    </section>
+
+    <div class="chart-transactions">
+      <section class="chart">
+        <div class="chart-header">
+          <h3>Requisições de hoje</h3>
+          <div>
+            <button class="btn-blue">Error 5XX</button>
+            <button class="btn-gray">Filtrar</button>
+          </div>
+        </div>
+        <canvas id="lineChart"></canvas>
+      </section>
+
+      <section class="transactions">
+        <h3>Últimas transações</h3>
+        <table style="width: 100%; border-spacing: 0 10px;">
+          <thead>
+            <tr>
+              <th style="text-align: left;">ATIVO</th>
+              <th>QTD</th>
+              <th>PREÇO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>BBAS3</strong></td><td>100</td><td>R$ 56,00</td></tr>
+            <tr><td><strong>BBAS3</strong></td><td>78</td><td>R$ 74,00</td></tr>
+            <tr><td><strong>BBAS3</strong></td><td>90</td><td>R$ 32,55</td></tr>
+            <tr><td><strong>BBAS3</strong></td><td>105</td><td>R$ 65,75</td></tr>
+            <tr><td><strong>BBAS3</strong></td><td>65</td><td>R$ 82,90</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <section class="recent-logs">
+      <h3>Logs recentes</h3>
+      <ul>
+        <li class="green-dot">Dados enviadas para a operação qq538840v21</li>
+        <li class="yellow-dot">BLK: Objeto não fundad ~ Ordem fecha</li>
+        <li class="gray-dot">Pedido sefchanoo a convivencias das ordem</li>
+        <li class="green-dot">Dados enviadas para a operação qq538840v21</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Ativa automaticamente o item da sidebar com base no nome do arquivo
+    const currentPath = window.location.pathname.split('/').pop();
+
+    document.querySelectorAll('.sidebar nav a').forEach(link => {
+      const linkPath = link.getAttribute('href');
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+
+</html>
