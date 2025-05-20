@@ -10,6 +10,8 @@
 </head>
 
 <body>
+  <!-- <script src="script.js"></script> -->  
+
   <aside class="sidebar">
     <div class="logo">
       <img src="assets/logo-bb.png" alt="Logo Banco do Brasil" class="logo-img">
@@ -17,7 +19,7 @@
     <nav>
       <a href="dashboard.html">Dashboard</a>
       <a href="logs.html">Logs</a>
-      <a href="#">Requisições</a>
+      <a href="requisicoes.html">Requisições</a>
     </nav>
     <a href="#" class="logout">⏻ Sair</a>
   </aside>
@@ -42,8 +44,17 @@
           <h3>Requisições de hoje</h3>
           <div>
             <button class="btn-blue">Error 5XX</button>
-            <button class="btn-gray">Filtrar</button>
+            <button class="btn-gray" id="abrir-filtros">Filtrar</button>
           </div>
+        <!-- Essa section mostra os serviços 
+          <div class="filtros" id="filtros">
+            <div class="filtros-disponiveis">
+              <h2>AQUI FICARÃO OS FILTROS</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dignissimos ad sit alias vero cumque excepturi commodi tempora exercitationem officiis eligendi veniam placeat dolorem odit inventore, sint sed nam reiciendis?</p>
+              <button id="fechar-filtros">Fechar</button>
+            </div>
+          </div>
+          -->  
         </div>
         <canvas id="lineChart"></canvas>
       </section>

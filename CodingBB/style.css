@@ -71,14 +71,17 @@ body {
   }
   
   .card h2 {
-    font-size: 16px;
+    display: flex;
+    font-size: 26px;
     color: #666;
     margin-bottom: 10px;
+    justify-content: center;
   }
-  
   .card p {
-    font-size: 22px;
+    font-size: 32px;
     font-weight: bold;
+    text-align: center;
+  
   }
   
   .green { color: #28a745; }
@@ -237,3 +240,28 @@ body {
     
   }
   
+/*
+
+Filtro
+
+.filtros{
+  background-color: #28a745;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filtros.open {
+  opacity: 1;
+  z-index: 999;
+}
+*/

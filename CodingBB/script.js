@@ -38,3 +38,18 @@ new Chart(ctx, {
     }
   }
 });
+
+/*
+
+const openBtn = document.getElementById("abrir-filtros");
+const closeBtn = document.getElementById("fechar-filtros");
+const filtros = document.getElementById("filtros");
+
+openBtn.addEventListener("click", () => {
+  filtros.classList.add("open");
+});
+closeBtn.addEventListener("click", () => {
+  filtros.classList.remove("open");
+});
+
+*/
