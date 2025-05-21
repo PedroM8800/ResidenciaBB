@@ -53,7 +53,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   
   .cards {
@@ -208,6 +208,99 @@ body {
     cursor: pointer;
   }
 
+.logs-section {
+    overflow-x: auto;
+  }
+  
+  .logs-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    font-size: 14px;
+  }
+  
+  .logs-table th {
+    text-align: left;
+    color: #999;
+    font-weight: 500;
+    padding-bottom: 8px;
+  }
+  
+  .logs-table td {
+    background: #f5f6f9;
+    padding: 14px 16px;
+    border-radius: 6px;
+    vertical-align: middle;
+  }
+  
+  .log-row td:first-child {
+    border-left: 6px solid;
+  }
+  
+  .green-line td:first-child {
+    border-color: #28a745;
+  }
+  
+  .yellow-line td:first-child {
+    border-color: #ffc107;
+  }
+  
+  .gray-line td:first-child {
+    border-color: #6c757d;
+  }
+
+  .logs-table .log-row:hover td {
+    background-color: #e8f0ff;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }.logs-section {
+    overflow-x: auto;
+  }
+  --------------------------------------------------------------------------------------
+  /* Logs presentes no Dashboard */
+  .logs-recentes-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    font-size: 14px;
+  }
+  
+  .logs-recentes-table th {
+    text-align: left;
+    color: #999;
+    font-weight: 500;
+    padding-bottom: 8px;
+  }
+  
+  .logs-recentes-table td {
+    background: #f5f6f9;
+    padding: 14px 16px;
+    border-radius: 6px;
+    vertical-align: middle;
+  }
+  
+  .log-row td:first-child {
+    border-left: 6px solid;
+  }
+  
+  .green-line td:first-child {
+    border-color: #28a745;
+  }
+  
+  .yellow-line td:first-child {
+    border-color: #ffc107;
+  }
+  
+  .gray-line td:first-child {
+    border-color: #6c757d;
+  }
+
+  .logs-table .log-row:hover td {
+    background-color: #e8f0ff;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }
+
   .sidebar nav a:hover {
     background-color: #2a2f3a;
     transition: background-color 0.2s ease;
@@ -240,9 +333,9 @@ body {
     
   }
   
-/*
 
-Filtro
+
+
 
 .filtros{
   background-color: #28a745;
@@ -264,4 +357,31 @@ Filtro
   opacity: 1;
   z-index: 999;
 }
-*/
+
+.filtros-inner{
+  background-color: #e8f0ff;
+  border-radius: 0%;
+  box-shadow: 0 1px 4px #1c1f26;
+  padding: 15px 25px;
+  
+}
+
+.filtros-inner h2 {
+  margin: 0;
+}
+.filtros-inner p {
+  line-height: 24px;
+  margin: 10px 0;
+}
+
+.fechar-filtros,
+  #status-filter {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+  }

@@ -39,7 +39,7 @@ new Chart(ctx, {
   }
 });
 
-/*
+
 
 const openBtn = document.getElementById("abrir-filtros");
 const closeBtn = document.getElementById("fechar-filtros");
@@ -52,4 +52,3 @@ closeBtn.addEventListener("click", () => {
   filtros.classList.remove("open");
 });
 
-*/
